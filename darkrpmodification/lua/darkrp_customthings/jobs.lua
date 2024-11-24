@@ -4064,7 +4064,8 @@ TEAM_CC11 = DarkRP.createJob("Grogu", {
     customCheck = function(ply)
         local allowedSteamIDs = {
             "STEAM_0:0:466939023",
-            "STEAM_0:0:555019178"
+            "STEAM_0:0:555019178",
+            "STEAM_0:0:620026441"
         }
         return table.HasValue(allowedSteamIDs, ply:SteamID())
     end,
