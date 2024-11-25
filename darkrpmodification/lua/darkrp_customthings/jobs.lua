@@ -4072,6 +4072,39 @@ TEAM_CC11 = DarkRP.createJob("Grogu", {
     CustomCheckFailMsg = "You do not have access to this custom job. Contact Cinder if you wish to be added to this CC"
 })
 
+TEAM_CC12 = DarkRP.createJob("PORG", {
+    color = Color(195, 100, 10, 255),
+    model = {
+        "models/player/artel/porg/porg.mdl"
+    },
+    description = [[Larry's Porg CC]],
+    weapons = {"at_sw_dc17m", "rw_sw_b2rp_blaster", "rw_sw_droideka_sniper", "sswep_porg", "weapon_lightsaber_grogu", "rw_sw_dual_dc17ext", "weapon_bactainjector"},
+    command = "porg",
+    max = 5,
+    salary = 1000,
+    admin = 0,
+    vote = false,
+    hasLicense = true,
+    canDemote = false,
+    category = "Custom Characters",
+    sortOrder = 0,
+    PlayerSpawn = function(ply)
+        ply:SetHealth(200)
+        ply:SetMaxHealth(200)
+        ply:SetArmor(100)
+        ply:SetMaxArmor(100)
+    end,
+    customCheck = function(ply)
+        local allowedSteamIDs = {
+            "STEAM_0:0:466939023",
+            "STEAM_0:0:555019178",
+            "STEAM_0:0:620026441"
+        }
+        return table.HasValue(allowedSteamIDs, ply:SteamID())
+    end,
+    CustomCheckFailMsg = "You do not have access to this custom job. Contact Cinder if you wish to be added to this CC"
+})
+
 --[[------------------------------- Administrative --------------------------]]--
 
 TEAM_ADMIN = DarkRP.createJob("Administration", {
