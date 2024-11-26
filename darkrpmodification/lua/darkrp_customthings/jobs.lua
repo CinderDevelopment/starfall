@@ -4110,7 +4110,7 @@ TEAM_CC12 = DarkRP.createJob("PORG", {
     CustomCheckFailMsg = "You do not have access to this custom job. Contact Larrie if you wish to be added to this CC"
 })
 
-TEAM_CC12 = DarkRP.createJob("Chimaera Squad", {
+TEAM_CC13 = DarkRP.createJob("Chimaera Squad", {
     color = Color(0, 255, 255, 255),
     model = {
         "models/gonzo/chimeradeathtroopers/chimeradeathtrooperstrooper/chimeradeathtrooperstrooper.mdl",
