@@ -4119,7 +4119,7 @@ TEAM_CC12 = DarkRP.createJob("Chimaera Squad", {
         "models/gonzo/chimeradeathtroopers/chimeradeathtrooperscommander/chimeradeathtrooperscommander.mdl"
     },
     description = [[Nemesis' Chimaera Squad CC]],
-    weapons = {"rw_sw_e11s", "rw_sw_e11d", "rw_sw_dc19", "rw_sw_westar35", "rw_sw_huntershotgun"},
+    weapons = {"rw_sw_e11s", "rw_sw_e11d", "rw_sw_dc19", "rw_sw_westar35", "rw_sw_huntershotgun", "realistic_hook"},
     command = "chimaera_squad",
     max = 5,
     salary = 1000,
