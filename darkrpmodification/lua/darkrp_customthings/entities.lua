@@ -193,6 +193,17 @@ DarkRP.createEntity("Tie Defender", {
     category = "LFS Ships",
 })
 
+DarkRP.createEntity("Tie Phantom", {
+    ent = "lunasflightschool_niksacokica_tie_phantom",
+    cmd = "tie_phantom",
+    model = "models/kingpommes/starwars/tie/defender.mdl",
+    price = 500,
+    max = 1,
+    allowed = {
+        TEAM_CC13
+    },
+    category = "LFS Ships",
+})
 
 --[[
     Blaster Ammo - Entity
