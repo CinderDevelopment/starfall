@@ -4014,7 +4014,7 @@ TEAM_CC10 = DarkRP.createJob("Bad Batch", {
         "models/wg/misc_models/wrecker.mdl"
     },
     description = [[Tom's Bad Batch CC]],
-    weapons = {"at_sw_dc17m", "rw_sw_dual_dc17ext", "weapon_lightsaber_vadersfist", "rw_sw_dc15s_purge", "rw_sw_dp23", "jet_mk1"},
+    weapons = {"at_sw_dc17m", "rw_sw_dual_dc17ext", "servius_crosshairrifle", "weapon_lightsaber_vadersfist", "rw_sw_dc15s_purge", "rw_sw_dp23", "jet_mk1"},
     command = "bad_batch",
     max = 5,
     salary = 1000,
@@ -4103,7 +4103,8 @@ TEAM_CC12 = DarkRP.createJob("PORG", {
         local allowedSteamIDs = {
             "STEAM_0:1:642714758",
             "STEAM_0:0:178244741",
-            "STEAM_0:0:102748491"
+            "STEAM_0:0:102748491",
+            "STEAM_0:0:526440309"
         }
         return table.HasValue(allowedSteamIDs, ply:SteamID())
     end,
