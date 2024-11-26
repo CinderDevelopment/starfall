@@ -193,10 +193,10 @@ DarkRP.createEntity("Tie Defender", {
     category = "LFS Ships",
 })
 
-DarkRP.createEntity("Tie Phantom", {
-    ent = "lunasflightschool_niksacokica_tie_phantom",
-    cmd = "tie_phantom",
-    model = "models/kingpommes/starwars/tie/defender.mdl",
+DarkRP.createEntity("Tie ETA2", {
+    ent = "lunasflightschool_niksacokica_tie_eta2",
+    cmd = "tie_eta2",
+    model = "models/tie_eta2/tie_eta2.mdl",
     price = 500,
     max = 1,
     allowed = {
