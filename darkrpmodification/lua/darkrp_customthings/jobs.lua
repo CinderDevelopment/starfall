@@ -4004,14 +4004,18 @@ TEAM_CC9 = DarkRP.createJob("Advanced Retrieval Squad", {
     CustomCheckFailMsg = "You do not have access to this custom job. Contact Suki if you wish to be added to this CC"
 })
 
-TEAM_CC10 = DarkRP.createJob("501st Imperial Commando", {
+TEAM_CC10 = DarkRP.createJob("Bad Batch", {
     color = Color(0, 0, 0, 255),
     model = {
-        "models/bunny/501_imperial_commando/501_imperial_commando.mdl"
+        "models/nada/badbatchcrosshair.mdl",
+        "models/wg/misc_models/echo.mdl",
+        "models/wg/misc_models/hunter.mdl",
+        "models/wg/misc_models/tech.mdl",
+        "models/wg/misc_models/wrecker.mdl"
     },
-    description = [[Tom's 501st Imperial Commando CC]],
-    weapons = {"at_sw_dc17m", "rw_sw_dc15x", "weapon_lightsaber_vadersfist", "at_sw_dc15sa", "rw_sw_dc19", "jet_mk1"},
-    command = "501st_imperial_commando",
+    description = [[Tom's Bad Batch CC]],
+    weapons = {"at_sw_dc17m", "rw_sw_dual_dc17ext", "weapon_lightsaber_vadersfist", "rw_sw_dc15s_purge", "rw_sw_dp23", "jet_mk1"},
+    command = "bad_batch",
     max = 5,
     salary = 1000,
     admin = 0,
@@ -4030,9 +4034,10 @@ TEAM_CC10 = DarkRP.createJob("501st Imperial Commando", {
     customCheck = function(ply)
         local allowedSteamIDs = {
             "STEAM_0:0:526440309",
-            "STEAM_0:0:919977118",
-            "STEAM_0:1:124119779",
-            "STEAM_0:0:882297846"
+            "STEAM_0:0:882297846",
+            "STEAM_0:1:631465701",
+            "STEAM_0:0:450890359",
+            "STEAM_0:0:755999289"
         }
         return table.HasValue(allowedSteamIDs, ply:SteamID())
     end,
@@ -4077,8 +4082,8 @@ TEAM_CC12 = DarkRP.createJob("PORG", {
     model = {
         "models/player/artel/porg/porg.mdl"
     },
-    description = [[Larry's Porg CC]],
-    weapons = {"at_sw_dc17m", "rw_sw_b2rp_blaster", "rw_sw_droideka_sniper", "sswep_porg", "weapon_lightsaber_grogu", "rw_sw_dual_dc17ext", "weapon_bactainjector"},
+    description = [[Larrie's Porg CC]],
+    weapons = {"at_sw_dc17m", "rw_sw_b2rp_blaster", "at_sw_dc15sa", "rw_sw_droideka_sniper", "sswep_porg"},
     command = "porg",
     max = 5,
     salary = 1000,
@@ -4096,13 +4101,48 @@ TEAM_CC12 = DarkRP.createJob("PORG", {
     end,
     customCheck = function(ply)
         local allowedSteamIDs = {
-            "STEAM_0:0:466939023",
-            "STEAM_0:0:555019178",
-            "STEAM_0:0:620026441"
+            "STEAM_0:1:642714758",
+            "STEAM_0:0:178244741",
+            "STEAM_0:0:102748491"
         }
         return table.HasValue(allowedSteamIDs, ply:SteamID())
     end,
-    CustomCheckFailMsg = "You do not have access to this custom job. Contact Cinder if you wish to be added to this CC"
+    CustomCheckFailMsg = "You do not have access to this custom job. Contact Larrie if you wish to be added to this CC"
+})
+
+TEAM_CC12 = DarkRP.createJob("Chimaera Squad", {
+    color = Color(0, 255, 255, 255),
+    model = {
+        "models/gonzo/chimeradeathtroopers/chimeradeathtrooperstrooper/chimeradeathtrooperstrooper.mdl",
+        "models/gonzo/chimeradeathtroopers/chimeradeathtrooperssergeant/chimeradeathtrooperssergeant.mdl",
+        "models/gonzo/chimeradeathtroopers/chimeradeathtroopersofficer/chimeradeathtroopersofficer.mdl",
+        "models/gonzo/chimeradeathtroopers/chimeradeathtrooperscommander/chimeradeathtrooperscommander.mdl"
+    },
+    description = [[Nemesis' Chimaera Squad CC]],
+    weapons = {"rw_sw_e11s", "rw_sw_e11d", "rw_sw_dc19", "rw_sw_westar35", "rw_sw_huntershotgun"},
+    command = "chimaera_squad",
+    max = 5,
+    salary = 1000,
+    admin = 0,
+    vote = false,
+    hasLicense = true,
+    canDemote = false,
+    category = "Custom Characters",
+    sortOrder = 0,
+    PlayerSpawn = function(ply)
+        ply:SetHealth(600)
+        ply:SetMaxHealth(600)
+        ply:SetArmor(100)
+        ply:SetMaxArmor(100)
+    end,
+    customCheck = function(ply)
+        local allowedSteamIDs = {
+            "STEAM_0:0:525281116",
+            "STEAM_0:1:437789140"
+        }
+        return table.HasValue(allowedSteamIDs, ply:SteamID())
+    end,
+    CustomCheckFailMsg = "You do not have access to this custom job. Contact Nemesis if you wish to be added to this CC"
 })
 
 --[[------------------------------- Administrative --------------------------]]--
@@ -4125,7 +4165,7 @@ TEAM_ADMIN = DarkRP.createJob("Administration", {
         -- Custom check function for staff ranks
     customCheck = function(ply)
         -- Assuming ranks are stored in a table (you may need to adjust this to match your actual rank system)
-        local staffRanks = { "gamemaster", "trialmod", "moderator", "gamemastermod", "seniormod", "gamemastersenmod", "admin", "gamemasteradmin", "senioradmin", "gamemastersenadmin", "superadmin-", "headadmin", "superadmin" } -- Define which ranks are allowed
+        local staffRanks = { "gamemaster", "trialmod", "moderator", "gamemastermod", "seniormod", "gamemastersenmod", "admin", "gamemasteradmin", "senioradmin", "gamemastersenadmin", "superadmin-", "headadmin", "superadmin", "founder" } -- Define which ranks are allowed
         return table.HasValue(staffRanks, ply:GetUserGroup()) -- Check if the player's user group is in the allowed ranks
     end,
     
@@ -4155,7 +4195,7 @@ TEAM_JMT = DarkRP.createJob("[JMT] Imperial Council", {
             -- Custom check function for staff ranks
     customCheck = function(ply)
         -- Assuming ranks are stored in a table (you may need to adjust this to match your actual rank system)
-        local staffRanks = { "superadmin-", "headadmin", "superadmin" } -- Define which ranks are allowed
+        local staffRanks = { "superadmin-", "headadmin", "superadmin", "founder" } -- Define which ranks are allowed
         return table.HasValue(staffRanks, ply:GetUserGroup()) -- Check if the player's user group is in the allowed ranks
     end,
     
@@ -4185,7 +4225,7 @@ TEAM_GM = DarkRP.createJob("[GM] Imperial Advisor", {
             -- Custom check function for staff ranks
     customCheck = function(ply)
         -- Assuming ranks are stored in a table (you may need to adjust this to match your actual rank system)
-        local staffRanks = { "gamemaster", "gamemastermod", "gamemastersenmod", "gamemasteradmin", "gamemastersenadmin", "superadmin-", "headadmin", "superadmin" } -- Define which ranks are allowed
+        local staffRanks = { "gamemaster", "gamemastermod", "gamemastersenmod", "gamemasteradmin", "gamemastersenadmin", "superadmin-", "headadmin", "superadmin", "founder" } -- Define which ranks are allowed
         return table.HasValue(staffRanks, ply:GetUserGroup()) -- Check if the player's user group is in the allowed ranks
     end,
     
