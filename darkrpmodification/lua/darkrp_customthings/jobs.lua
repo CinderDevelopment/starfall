@@ -1645,7 +1645,13 @@ TEAM_BO5 = DarkRP.createJob("Crewman", {
 
 TEAM_BO6 = DarkRP.createJob("Navy Starfighter Pilot", {
     color = Color(42, 59, 94, 255),
-    model = "models/player/markus/swbf2/characters/hero/imperial_pilots/pilot_imperial_orig_01/pilot_imperial_orig_01.mdl",
+    model = {
+    "models/player/markus/swbf2/characters/hero/imperial_pilots/pilot_imperial_orig_01/pilot_imperial_orig_01.mdl",
+    "models/player/markus/swbf2/characters/hero/imperial_pilots/pilot_imperial_orig_02_r/pilot_imperial_orig_02_r.mdl",
+    "models/player/markus/swbf2/characters/hero/imperial_pilots/pilot_imperial_orig_05_o/pilot_imperial_orig_05_o.mdl",
+    "models/player/markus/swbf2/characters/hero/imperial_pilots/pilot_imperial_orig_06_p/pilot_imperial_orig_06_p.mdl",
+    "models/player/markus/swbf2/characters/hero/imperial_pilots/pilot_imperial_orig_04_b/pilot_imperial_orig_04_b.mdl"
+},
     description = [[]],
      weapons = {"rw_sw_e11", "rw_sw_se14c", "alydus_fusioncutter", "rw_sw_e11_noscope", "cross_arms_swep"},
     command = "navy_starfighter_pilot",
