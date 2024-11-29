@@ -1,0 +1,15 @@
+Update Log 29th November 2024
+
++ Starfighter Pilot Job update:
+ "models/player/markus/swbf2/characters/hero/imperial_pilots/pilot_imperial_orig_01/pilot_imperial_orig_01.mdl",
+    "models/player/markus/swbf2/characters/hero/imperial_pilots/pilot_imperial_orig_02_r/pilot_imperial_orig_02_r.mdl",
+    "models/player/markus/swbf2/characters/hero/imperial_pilots/pilot_imperial_orig_05_o/pilot_imperial_orig_05_o.mdl",
+    "models/player/markus/swbf2/characters/hero/imperial_pilots/pilot_imperial_orig_06_p/pilot_imperial_orig_06_p.mdl",
+    "models/player/markus/swbf2/characters/hero/imperial_pilots/pilot_imperial_orig_04_b/pilot_imperial_orig_04_b.mdl"
+
+
++ Updated Bad Batch Custom Class Health Value
+Changed from 600 to 1000
+
++ Packed 'all' addons into singular packs
+-300 addons into 40~ 
