@@ -4026,8 +4026,8 @@ TEAM_CC10 = DarkRP.createJob("Bad Batch", {
     sortOrder = 0,
     modelScale = 1,
     PlayerSpawn = function(ply)
-        ply:SetHealth(600)
-        ply:SetMaxHealth(600)
+        ply:SetHealth(1000)
+        ply:SetMaxHealth(1000)
         ply:SetArmor(100)
         ply:SetMaxArmor(100)
     end,
